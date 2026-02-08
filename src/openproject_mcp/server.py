@@ -22,6 +22,9 @@ def get_client() -> OpenProjectClient:
     """Get or create OpenProject client."""
     global _client
     if _client is None:
+        # Debug: log configuration
+        import sys
+        print(f"DEBUG: URL={settings.url}, API_KEY={settings.api_key[:10]}..." if settings.api_key else "DEBUG: API_KEY is empty!", file=sys.stderr)
         _client = OpenProjectClient()
     return _client
 

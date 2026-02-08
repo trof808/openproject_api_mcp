@@ -7,8 +7,8 @@ class Settings(BaseSettings):
     """OpenProject MCP Server settings."""
 
     # OpenProject API settings
-    openproject_url: str = "http://77.232.130.90:8085"
-    openproject_api_key: str = ""
+    url: str = "http://77.232.130.90:8085"
+    api_key: str = ""
 
     # Query IDs for board columns
     query_id_bugs: int = 1390  # Колонка "Баги"

@@ -17,8 +17,8 @@ class OpenProjectClient:
         base_url: str | None = None,
         api_key: str | None = None,
     ):
-        self.base_url = (base_url or settings.openproject_url).rstrip("/")
-        self.api_key = api_key or settings.openproject_api_key
+        self.base_url = (base_url or settings.url).rstrip("/")
+        self.api_key = api_key or settings.api_key
         self._client: httpx.AsyncClient | None = None
 
     @property
